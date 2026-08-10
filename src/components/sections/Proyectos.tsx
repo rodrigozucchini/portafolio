@@ -1,51 +1,11 @@
-type Item = {
-  index: string;
-  title: string;
-  description: string;
-  href?: string;
-  linkLabel?: string;
-  icon: "github" | "medium" | "book" | "users";
-};
+"use client";
 
-const items: Item[] = [
-  {
-    index: "01",
-    title: "Waiona MS",
-    description:
-      "Migración de un proyecto freelance monolítico hacia una arquitectura de microservicios.",
-    href: "https://github.com/rodrigozucchini/waiona-ms",
-    linkLabel: "Ver repositorio",
-    icon: "github",
-  },
-  {
-    index: "02",
-    title: "Internal Chat MS",
-    description:
-      "Microservicio de chat interno en tiempo real, construido con Socket.IO.",
-    href: "https://github.com/rodrigozucchini/internal-chat-ms",
-    linkLabel: "Ver repositorio",
-    icon: "github",
-  },
-  {
-    index: "03",
-    title: "Artículos técnicos",
-    description: "Publicación de artículos sobre desarrollo de software.",
-    href: "https://medium.com/@ro-zcn",
-    linkLabel: "Ver en Medium",
-    icon: "medium",
-  },
-  {
-    index: "04",
-    title: "No Country",
-    description:
-      "Contribución como Desarrollador Frontend en un proyecto colaborativo.",
-    href: "https://nocountry.tech/",
-    linkLabel: "Ver programa",
-    icon: "users",
-  },
-];
+import { useLanguage } from "@/lib/i18n";
+import { translations } from "@/lib/translations";
 
-function Icon({ type }: { type: Item["icon"] }) {
+type IconType = "github" | "medium" | "book" | "users";
+
+function Icon({ type }: { type: IconType }) {
   const common = "h-5 w-5";
   switch (type) {
     case "github":
@@ -92,18 +52,21 @@ function Icon({ type }: { type: Item["icon"] }) {
 }
 
 export default function Proyectos() {
+  const { lang } = useLanguage();
+  const t = translations[lang].proyectos;
+
   return (
     <section id="proyectos" className="w-full border-t border-white/10 py-16">
       <p className="flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-zinc-400">
         <span className="h-1.5 w-1.5 rounded-full bg-[#0AE98A]" />
-        Proyectos de aprendizaje continuo
+        {t.eyebrow}
       </p>
       <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white">
-        Proyectos
+        {t.heading}
       </h2>
 
       <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
-        {items.map((item) => {
+        {t.items.map((item) => {
           const content = (
             <div className="group relative flex h-full flex-col gap-4 bg-[#011126] p-6 transition-colors hover:bg-white/[.03]">
               <span className="absolute right-5 top-4 font-mono text-xs text-zinc-600">
