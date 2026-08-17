@@ -44,10 +44,10 @@ export default function Hobbies() {
         {t.heading}
       </h2>
 
-      <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
+      <div className="mt-10 grid gap-4 sm:grid-cols-2">
         {t.items.map((item) => {
           const content = (
-            <div className="group relative flex h-full flex-col gap-4 bg-[#011126] p-6 transition-colors hover:bg-white/[.03]">
+            <div className="group relative flex h-full flex-col gap-4 rounded-lg border border-white/10 bg-[#011126] p-6 transition-colors hover:border-white/20 hover:bg-white/[.03]">
               <span className="absolute right-5 top-4 font-mono text-xs text-zinc-600">
                 {item.index}
               </span>
