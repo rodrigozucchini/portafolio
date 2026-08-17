@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 import { translations } from "@/lib/translations";
 
@@ -51,9 +52,56 @@ function Icon({ type }: { type: IconType }) {
   }
 }
 
+function ArrowIcon({ direction }: { direction: "left" | "right" }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      className="h-5 w-5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d={direction === "left" ? "M15 6l-6 6 6 6" : "M9 6l6 6-6 6"}
+      />
+    </svg>
+  );
+}
+
 export default function Proyectos() {
   const { lang } = useLanguage();
   const t = translations[lang].proyectos;
+  const [index, setIndex] = useState(0);
+
+  const total = t.items.length;
+  const item = t.items[index];
+
+  const goPrev = () => setIndex((i) => (i - 1 + total) % total);
+  const goNext = () => setIndex((i) => (i + 1) % total);
+
+  const content = (
+    <div className="group relative flex h-full flex-col gap-4 bg-[#011126] p-6 transition-colors hover:bg-white/[.03]">
+      <span className="absolute right-5 top-4 font-mono text-xs text-zinc-600">
+        {item.index}
+      </span>
+      <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#0AE98A]/30 text-[#0AE98A]">
+        <Icon type={item.icon} />
+      </span>
+      <div>
+        <h3 className="font-medium text-white">{item.title}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-zinc-300">
+          {item.description}
+        </p>
+      </div>
+      {item.href && (
+        <span className="mt-auto flex items-center gap-1 pt-2 text-sm text-[#0AE98A] transition-transform group-hover:translate-x-1">
+          {item.linkLabel} →
+        </span>
+      )}
+    </div>
+  );
 
   return (
     <section id="proyectos" className="w-full border-t border-white/10 py-16">
@@ -65,45 +113,56 @@ export default function Proyectos() {
         {t.heading}
       </h2>
 
-      <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
-        {t.items.map((item) => {
-          const content = (
-            <div className="group relative flex h-full flex-col gap-4 bg-[#011126] p-6 transition-colors hover:bg-white/[.03]">
-              <span className="absolute right-5 top-4 font-mono text-xs text-zinc-600">
-                {item.index}
-              </span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#0AE98A]/30 text-[#0AE98A]">
-                <Icon type={item.icon} />
-              </span>
-              <div>
-                <h3 className="font-medium text-white">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-300">
-                  {item.description}
-                </p>
-              </div>
-              {item.href && (
-                <span className="mt-auto flex items-center gap-1 pt-2 text-sm text-[#0AE98A] transition-transform group-hover:translate-x-1">
-                  {item.linkLabel} →
-                </span>
-              )}
-            </div>
-          );
+      <div className="mt-10 flex items-center gap-3 sm:gap-5">
+        <button
+          type="button"
+          onClick={goPrev}
+          disabled={total <= 1}
+          aria-label={t.prevLabel}
+          className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border border-white/10 text-zinc-300 transition-colors hover:border-[#0AE98A]/40 hover:text-[#0AE98A] disabled:cursor-default disabled:opacity-30 disabled:hover:border-white/10 disabled:hover:text-zinc-300"
+        >
+          <ArrowIcon direction="left" />
+        </button>
 
-          return item.href ? (
-            <a
-              key={item.title}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
+        <div
+          key={item.title}
+          className="min-w-0 flex-1 overflow-hidden rounded-lg border border-white/10 motion-safe:animate-[fade-in_.3s_ease]"
+        >
+          {item.href ? (
+            <a href={item.href} target="_blank" rel="noopener noreferrer" className="block h-full">
               {content}
             </a>
           ) : (
-            <div key={item.title}>{content}</div>
-          );
-        })}
+            content
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={goNext}
+          disabled={total <= 1}
+          aria-label={t.nextLabel}
+          className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border border-white/10 text-zinc-300 transition-colors hover:border-[#0AE98A]/40 hover:text-[#0AE98A] disabled:cursor-default disabled:opacity-30 disabled:hover:border-white/10 disabled:hover:text-zinc-300"
+        >
+          <ArrowIcon direction="right" />
+        </button>
       </div>
+
+      {total > 1 && (
+        <div className="mt-5 flex items-center justify-center gap-2">
+          {t.items.map((it, i) => (
+            <button
+              key={it.title}
+              type="button"
+              onClick={() => setIndex(i)}
+              aria-label={it.title}
+              className={`h-1.5 rounded-full transition-all ${
+                i === index ? "w-5 bg-[#0AE98A]" : "w-1.5 bg-white/20 hover:bg-white/40"
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

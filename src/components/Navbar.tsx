@@ -14,6 +14,7 @@ export default function Navbar() {
     { href: "#educacion", label: t.educacion },
     { href: "#experiencia", label: t.experiencia },
     { href: "#proyectos", label: t.proyectos },
+    { href: "#hobbies", label: t.hobbies },
     { href: "#contacto", label: t.contacto },
   ];
 

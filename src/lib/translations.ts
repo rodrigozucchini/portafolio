@@ -6,6 +6,7 @@ export const translations = {
       educacion: "Educación",
       experiencia: "Experiencia",
       proyectos: "Proyectos",
+      hobbies: "Hobbies",
       contacto: "Contacto",
       menuLabel: "Abrir menú",
     },
@@ -216,6 +217,8 @@ export const translations = {
     proyectos: {
       eyebrow: "Proyectos de aprendizaje continuo",
       heading: "Proyectos",
+      prevLabel: "Proyecto anterior",
+      nextLabel: "Proyecto siguiente",
       items: [
         {
           index: "01",
@@ -237,20 +240,35 @@ export const translations = {
         },
         {
           index: "03",
+          title: "Load Balancing K8s",
+          description:
+            "App full-stack tipo CRUD usada como playground de sistemas distribuidos: load balancing L7, escalado horizontal y caché con invalidación, orquestada con Kubernetes.",
+          href: "https://github.com/rodrigozucchini/load-balancing-k8s",
+          linkLabel: "Ver repositorio",
+          icon: "github" as const,
+        },
+        {
+          index: "04",
+          title: "Infra Docker & Kubernetes",
+          description:
+            "Proyecto de infraestructura para practicar Docker y Kubernetes explorando fundamentos de networking (IP, DNS, NAT) en dos fases: manual con iptables y automatizada con Kubernetes.",
+          href: "https://github.com/rodrigozucchini/infra-ks8-docker-monitoring",
+          linkLabel: "Ver repositorio",
+          icon: "github" as const,
+        },
+      ],
+    },
+    hobbies: {
+      eyebrow: "Tiempo libre",
+      heading: "Hobbies",
+      items: [
+        {
+          index: "01",
           title: "Artículos técnicos",
           description: "Publicación de artículos sobre desarrollo de software.",
           href: "https://medium.com/@ro-zcn",
           linkLabel: "Ver en Medium",
           icon: "medium" as const,
-        },
-        {
-          index: "04",
-          title: "No Country",
-          description:
-            "Contribución como Desarrollador Frontend en un proyecto colaborativo.",
-          href: "https://nocountry.tech/",
-          linkLabel: "Ver programa",
-          icon: "users" as const,
         },
       ],
     },
@@ -268,6 +286,7 @@ export const translations = {
       educacion: "Education",
       experiencia: "Experience",
       proyectos: "Projects",
+      hobbies: "Hobbies",
       contacto: "Contact",
       menuLabel: "Open menu",
     },
@@ -478,6 +497,8 @@ export const translations = {
     proyectos: {
       eyebrow: "Continuous learning projects",
       heading: "Projects",
+      prevLabel: "Previous project",
+      nextLabel: "Next project",
       items: [
         {
           index: "01",
@@ -499,20 +520,35 @@ export const translations = {
         },
         {
           index: "03",
+          title: "Load Balancing K8s",
+          description:
+            "Full-stack CRUD app used as a playground for distributed systems concepts: L7 load balancing, horizontal scaling, and cache invalidation, orchestrated with Kubernetes.",
+          href: "https://github.com/rodrigozucchini/load-balancing-k8s",
+          linkLabel: "View repository",
+          icon: "github" as const,
+        },
+        {
+          index: "04",
+          title: "Infra Docker & Kubernetes",
+          description:
+            "Infrastructure project to practice Docker and Kubernetes by exploring networking fundamentals (IP, DNS, NAT) across two phases: manual with iptables and automated with Kubernetes.",
+          href: "https://github.com/rodrigozucchini/infra-ks8-docker-monitoring",
+          linkLabel: "View repository",
+          icon: "github" as const,
+        },
+      ],
+    },
+    hobbies: {
+      eyebrow: "Free time",
+      heading: "Hobbies",
+      items: [
+        {
+          index: "01",
           title: "Technical articles",
           description: "Publishing articles about software development.",
           href: "https://medium.com/@ro-zcn",
           linkLabel: "View on Medium",
           icon: "medium" as const,
-        },
-        {
-          index: "04",
-          title: "No Country",
-          description:
-            "Contribution as a Frontend Developer on a collaborative project.",
-          href: "https://nocountry.tech/",
-          linkLabel: "View program",
-          icon: "users" as const,
         },
       ],
     },
