@@ -62,6 +62,16 @@ export const translations = {
           institution: "Online · Nivel C1",
           file: "/documents/certificado-ingles.pdf",
         },
+        {
+          title: "Ruta de Fundamentos de Data Science y AI",
+          institution: "Platzi · Diploma de ruta de aprendizaje",
+          file: "https://platzi.com/p/rodrigoangelzucchini/ruta/30082-ruta/diploma/detalle/",
+        },
+        {
+          title: "Ruta de Fundamentos de Cloud y DevOps",
+          institution: "Platzi · Diploma de ruta de aprendizaje",
+          file: "https://platzi.com/p/rodrigoangelzucchini/ruta/30095-ruta/diploma/detalle/",
+        },
       ],
       platzi: {
         title: "Platzi",
@@ -341,6 +351,16 @@ export const translations = {
           title: "English Certification C1",
           institution: "Online · C1 Level",
           file: "/documents/certificado-ingles.pdf",
+        },
+        {
+          title: "Data Science & AI Fundamentals Path",
+          institution: "Platzi · Learning path diploma",
+          file: "https://platzi.com/p/rodrigoangelzucchini/ruta/30082-ruta/diploma/detalle/",
+        },
+        {
+          title: "Cloud & DevOps Fundamentals Path",
+          institution: "Platzi · Learning path diploma",
+          file: "https://platzi.com/p/rodrigoangelzucchini/ruta/30095-ruta/diploma/detalle/",
         },
       ],
       platzi: {
