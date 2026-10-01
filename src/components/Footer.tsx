@@ -1,7 +1,7 @@
 const links = [
   { href: "https://github.com/rodrigozucchini", label: "GitHub" },
   { href: "https://linkedin.com/in/rodrigo-angel-zucchini", label: "LinkedIn" },
-  { href: "mailto:devroz@gmail.com", label: "Email" },
+  { href: "mailto:devrozcn@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {

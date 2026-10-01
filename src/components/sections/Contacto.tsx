@@ -17,8 +17,8 @@ export default function Contacto() {
         {t.heading}
       </h2>
       <div className="mt-6 flex flex-col gap-2 text-zinc-300">
-        <a href="mailto:devroz@gmail.com" className="hover:text-white">
-          devroz@gmail.com
+        <a href="mailto:devrozcn@gmail.com" className="hover:text-white">
+          devrozcn@gmail.com
         </a>
         <a
           href="https://linkedin.com/in/rodrigo-angel-zucchini"

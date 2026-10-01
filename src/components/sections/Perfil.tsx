@@ -24,6 +24,10 @@ export default function Perfil() {
           </span>
         </h1>
 
+        <p className="text-lg font-medium text-[#0AE98A] sm:text-xl">
+          {t.role}
+        </p>
+
         <p className="max-w-xl text-lg leading-8 text-zinc-300">
           {t.paragraph}
         </p>
