@@ -13,7 +13,7 @@ export const translations = {
     perfil: {
       eyebrow: "Perfil",
       name: "Rodrigo Zucchini",
-      role: "Analista y Desarrollador de Sistemas | Especialista en Soporte de Aplicaciones",
+      role: "Analista y Desarrollador de Sistemas | Soporte de Aplicaciones",
       paragraph:
         "Técnico Superior en Análisis de Aplicaciones y Desarrollo de Software. Diseño e implemento sistemas de punta a punta: relevo requerimientos, documento especificaciones (SRS, historias de usuario, matrices de trazabilidad, contratos de API) y dirijo la implementación con desarrollo guiado por especificaciones (SDD) apoyado en agentes de IA (Claude Code, MCP). Complemento este perfil técnico con experiencia real en soporte y mesa de ayuda, lo que me da una visión end-to-end: entiendo al usuario final tanto como al sistema que lo sostiene.",
       cv: "Ver CV ↗",
@@ -313,7 +313,7 @@ export const translations = {
     perfil: {
       eyebrow: "Profile",
       name: "Rodrigo Zucchini",
-      role: "Systems Analyst & Developer | Application Support Specialist",
+      role: "Systems Analyst & Developer | Application Support",
       paragraph:
         "Higher Technician in Application Analysis and Software Development. I design and implement systems end-to-end: gathering requirements, writing specifications (SRS, user stories, traceability matrices, API contracts), and driving implementation through Spec-Driven Development (SDD) supported by AI agents (Claude Code, MCP). I pair this technical foundation with real helpdesk and support experience, giving me a true end-to-end view — I understand both the end user and the system behind them.",
       cv: "View CV ↗",
