@@ -1,7 +1,6 @@
 export const translations = {
   es: {
     nav: {
-      logo: "Mi Portafolio",
       perfil: "Perfil",
       educacion: "Educación",
       experiencia: "Experiencia",
@@ -239,6 +238,14 @@ export const translations = {
       heading: "Proyectos",
       prevLabel: "Proyecto anterior",
       nextLabel: "Proyecto siguiente",
+      featured: {
+        badge: "Destacado",
+        title: "TEARDOWN",
+        description:
+          "Mi registro de aprendizaje: cada concepto que desarmo hasta entenderlo, con el código en GitHub, el artículo en Medium y, a veces, un video.",
+        href: "https://rodrigozucchini.github.io/teardown/",
+        linkLabel: "Ver sitio",
+      },
       items: [
         {
           index: "01",
@@ -301,7 +308,6 @@ export const translations = {
   },
   en: {
     nav: {
-      logo: "My Portfolio",
       perfil: "Profile",
       educacion: "Education",
       experiencia: "Experience",
@@ -539,6 +545,14 @@ export const translations = {
       heading: "Projects",
       prevLabel: "Previous project",
       nextLabel: "Next project",
+      featured: {
+        badge: "Featured",
+        title: "TEARDOWN",
+        description:
+          "My learning log: every concept I take apart until I understand it, with the code on GitHub, the write-up on Medium and, sometimes, a video.",
+        href: "https://rodrigozucchini.github.io/teardown/",
+        linkLabel: "Visit site",
+      },
       items: [
         {
           index: "01",

@@ -113,7 +113,27 @@ export default function Proyectos() {
         {t.heading}
       </h2>
 
-      <div className="mt-10 flex items-center gap-3 sm:gap-5">
+      <a
+        href={t.featured.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group mt-10 flex flex-col gap-3 rounded-lg border border-[#0AE98A]/40 bg-[#0AE98A]/[.04] p-6 transition-colors hover:border-[#0AE98A]/70 hover:bg-[#0AE98A]/[.07]"
+      >
+        <span className="w-fit rounded-full border border-[#0AE98A]/40 px-2.5 py-0.5 font-mono text-xs uppercase tracking-wide text-[#0AE98A]">
+          {t.featured.badge}
+        </span>
+        <h3 className="text-xl font-bold tracking-tight text-white">
+          {t.featured.title}
+        </h3>
+        <p className="text-sm leading-relaxed text-zinc-300">
+          {t.featured.description}
+        </p>
+        <span className="flex items-center gap-1 pt-1 text-sm text-[#0AE98A] transition-transform group-hover:translate-x-1">
+          {t.featured.linkLabel} →
+        </span>
+      </a>
+
+      <div className="mt-8 flex items-center gap-3 sm:gap-5">
         <button
           type="button"
           onClick={goPrev}
