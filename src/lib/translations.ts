@@ -1,7 +1,6 @@
 export const translations = {
   es: {
     nav: {
-      logo: "Mi Portafolio",
       perfil: "Perfil",
       educacion: "Educación",
       experiencia: "Experiencia",
@@ -13,7 +12,7 @@ export const translations = {
     perfil: {
       eyebrow: "Perfil",
       name: "Rodrigo Zucchini",
-      role: "Analista y Desarrollador de Sistemas | Especialista en Soporte de Aplicaciones",
+      role: "Analista y Desarrollador de Sistemas | Soporte de Aplicaciones",
       paragraph:
         "Técnico Superior en Análisis de Aplicaciones y Desarrollo de Software. Diseño e implemento sistemas de punta a punta: relevo requerimientos, documento especificaciones (SRS, historias de usuario, matrices de trazabilidad, contratos de API) y dirijo la implementación con desarrollo guiado por especificaciones (SDD) apoyado en agentes de IA (Claude Code, MCP). Complemento este perfil técnico con experiencia real en soporte y mesa de ayuda, lo que me da una visión end-to-end: entiendo al usuario final tanto como al sistema que lo sostiene.",
       cv: "Ver CV ↗",
@@ -239,6 +238,14 @@ export const translations = {
       heading: "Proyectos",
       prevLabel: "Proyecto anterior",
       nextLabel: "Proyecto siguiente",
+      featured: {
+        badge: "Destacado",
+        title: "TEARDOWN",
+        description:
+          "Mi registro de aprendizaje: cada concepto que desarmo hasta entenderlo, con el código en GitHub, el artículo en Medium y, a veces, un video.",
+        href: "https://rodrigozucchini.github.io/teardown/",
+        linkLabel: "Ver sitio",
+      },
       items: [
         {
           index: "01",
@@ -301,7 +308,6 @@ export const translations = {
   },
   en: {
     nav: {
-      logo: "My Portfolio",
       perfil: "Profile",
       educacion: "Education",
       experiencia: "Experience",
@@ -313,7 +319,7 @@ export const translations = {
     perfil: {
       eyebrow: "Profile",
       name: "Rodrigo Zucchini",
-      role: "Systems Analyst & Developer | Application Support Specialist",
+      role: "Systems Analyst & Developer | Application Support",
       paragraph:
         "Higher Technician in Application Analysis and Software Development. I design and implement systems end-to-end: gathering requirements, writing specifications (SRS, user stories, traceability matrices, API contracts), and driving implementation through Spec-Driven Development (SDD) supported by AI agents (Claude Code, MCP). I pair this technical foundation with real helpdesk and support experience, giving me a true end-to-end view — I understand both the end user and the system behind them.",
       cv: "View CV ↗",
@@ -539,6 +545,14 @@ export const translations = {
       heading: "Projects",
       prevLabel: "Previous project",
       nextLabel: "Next project",
+      featured: {
+        badge: "Featured",
+        title: "TEARDOWN",
+        description:
+          "My learning log: every concept I take apart until I understand it, with the code on GitHub, the write-up on Medium and, sometimes, a video.",
+        href: "https://rodrigozucchini.github.io/teardown/",
+        linkLabel: "Visit site",
+      },
       items: [
         {
           index: "01",

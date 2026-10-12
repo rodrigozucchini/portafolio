@@ -20,11 +20,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#011126]/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4 sm:px-16">
-        <a href="#perfil" className="font-semibold tracking-tight text-white">
-          {t.logo}
-        </a>
-
+      <nav className="mx-auto flex max-w-3xl items-center justify-end px-6 py-4 sm:px-16">
         <div className="flex items-center gap-6">
           <ul className="hidden gap-6 text-sm font-medium sm:flex">
             {links.map((link) => (
